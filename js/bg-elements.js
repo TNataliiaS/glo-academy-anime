@@ -1,11 +1,9 @@
 const bgElements = () => {
     const elements = document.querySelectorAll('.set-bg');
 
-    for(let i = 0; i < elements.length; i++) {
-        const src = elements[i].dataset.setbg;
-
-        elements[i].style.background = `url(${src})`;
-    }
+    elements.forEach((elem) => {
+        elem.style.background = `url(${elem.dataset.setbg})`;
+    });
 };
 
 bgElements();
